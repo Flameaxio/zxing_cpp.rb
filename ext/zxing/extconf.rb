@@ -20,7 +20,8 @@ lib = File.expand_path "#{ZXING_CPP_BUILD}/libzxing.a"
 $CPPFLAGS = %(-I#{cpp_include})
 $DLDFLAGS = %(-lstdc++ #{lib})
 
-# iconv muss installiert sein
-$DLDFLAGS << %( -liconv)
+if /darwin/ =~ RUBY_PLATFORM
+  $DLDFLAGS << %( -liconv)
+end
 
 create_makefile 'zxing/zxing'
