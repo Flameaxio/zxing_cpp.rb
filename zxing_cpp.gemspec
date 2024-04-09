@@ -44,5 +44,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda', '~> 3.5'
 
   s.add_dependency 'ffi', '~> 1.1'
-  s.add_dependency 'rmagick', '~> 4.0'
+  s.add_dependency 'rmagick', '~> 5.0'
 end
